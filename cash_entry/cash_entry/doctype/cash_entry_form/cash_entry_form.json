@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-22 10:58:29.450087",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "number",
+  "cashbank",
+  "column_break_a7k7o",
+  "date",
+  "branch",
+  "section_break_u9nbb",
+  "accounting_entries",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "number",
+   "fieldtype": "Link",
+   "label": "Number",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cashbank",
+   "fieldtype": "Link",
+   "label": "Cash/Bank",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_a7k7o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section_break_u9nbb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accounting_entries",
+   "fieldtype": "Table",
+   "label": "Accounting Entries",
+   "options": "Cash Entry Form Table",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cash Entry Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-22 14:02:18.272568",
+ "modified_by": "Administrator",
+ "module": "Cash Entry",
+ "name": "Cash Entry Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
