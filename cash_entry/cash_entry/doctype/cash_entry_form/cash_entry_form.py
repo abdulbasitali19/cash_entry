@@ -28,7 +28,7 @@ class CashEntryForm(Document):
         doc.append("accounts", {
             "account": self.cashbank,
             "cost_center": self.accounting_entries[0].get("branch"),  # Assuming all entries have the same branch
-            "user_remarks": "",
+            "user_remark": "",
             "credit_in_account_currency": total_debit,
             "reference_type": ""
         })
@@ -38,9 +38,9 @@ class CashEntryForm(Document):
             doc.append("accounts", {
                 "account": entry.get("account_name"),
                 "cost_center": entry.get("branch"),
-                "user_remarks": entry.get("description"),
+                "user_remark": entry.get("description"),
                 "debit_in_account_currency": entry.get("amount"),
-                "reference_type": entry.get("reference")
+                "custom_reference_by_user": entry.get("reference")
             })
         
         # Submit the Journal Entry
